@@ -1,0 +1,113 @@
+
+public class flowerpot {
+	public String color;
+	public String pot;
+	public String ground;
+	public int volumes;
+	public int heightplant;
+	public boolean fruity;
+	public static int amountofwater = 0;
+
+	public flowerpot() {
+		//
+	}
+
+	public flowerpot(String color, String pot, boolean fruity, int volumes, int heightplant) {
+		this.color = color;
+		this.pot = pot;
+		this.fruity = fruity;
+
+		this.volumes = volumes;
+		setamountofwater(volumes * heightplant);
+
+	}
+
+	public flowerpot(String color, String pot, String ground, boolean fruity, int volumes, int heightplant) {
+		this.color = color;
+		this.pot = pot;
+		this.ground = ground;
+		this.heightplant = heightplant;
+		this.fruity = fruity;
+		this.volumes = volumes;
+		setamountofwater(volumes * heightplant);
+	}
+
+	public String toString() {
+		return "Опис вазона:" + "\ncolor-" + color + ".\npot-" + pot + ".\nground-" + ground + "\nheightplant-"
+				+ heightplant + ".\nfruity -" + fruity + ".\nvolumes-" + volumes;
+	}
+
+	public void printStaticSum() {
+		System.out.println("amountofwater:" + getamountofwater());
+	}
+
+	public void printSum() {
+		System.out.println("Number of fertilizers on" + getamountofwater() + "water" + (getamountofwater() / 4));
+	}
+
+	public void GoTO(String color, String pot, String ground, int heightplant, boolean fruity, int volumes) {
+		this.color = color;
+		this.pot = pot;
+		this.ground = ground;
+		this.heightplant = heightplant;
+		this.fruity = fruity;
+		this.volumes = volumes;
+	}
+
+	public void setpot(String pot) {
+		this.pot = pot;
+	}
+
+	public String getpot() {
+		return pot;
+	}
+
+	public void setheightplant(int heightplant) {
+		this.heightplant = heightplant;
+	}
+
+	public int getheightplant() {
+		return heightplant;
+	}
+
+	public void setground(String ground) {
+		this.ground = ground;
+	}
+
+	public String getground() {
+		return ground;
+	}
+
+	public void setfruity(boolean fruity) {
+		this.fruity = fruity;
+	}
+
+	public boolean getfruity() {
+		return fruity;
+	}
+
+	public void setcolor(String color) {
+		this.color = color;
+	}
+
+	public String getcolor() {
+		return color;
+	}
+
+	public void setvolumes(int volumes) {
+		this.volumes = volumes;
+	}
+
+	public int getvolumes() {
+		return volumes;
+	}
+
+	public void setamountofwater(int amountofwater) {
+		flowerpot.amountofwater = amountofwater;
+	}
+
+	public int getamountofwater() {
+		return amountofwater;
+	}
+
+}
