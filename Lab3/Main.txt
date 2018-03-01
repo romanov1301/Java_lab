@@ -1,0 +1,22 @@
+import java.util.LinkedList;
+import java.util.List;
+
+public class Main {
+	public static void main(String[] args) {
+		Animal turtle = new Animal("Reptile", 300);
+		Animal fish = new Animal("Fish", 3);
+		Animal snake = new Animal("Reptiles", 8);
+		Animal shark = new Animal("Fish", 28);
+		
+		List<Animal> animals = new LinkedList();
+		animals.add(turtle);
+		animals.add(fish);
+		animals.add(snake);
+		animals.add(shark);
+		
+		Zoo zoo = new Zoo(animals);
+		
+		System.out.println(zoo.searchAnimalsLongLivers(5));
+		
+	}
+}

@@ -1,0 +1,41 @@
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Zoo {
+
+    private List<Animal> animals = new LinkedList();
+
+    public void setPets(List<Animal> animals) {
+        this.animals = animals;
+    }
+
+    public List<Animal> getAnimal() {
+        return this.animals;
+    }
+
+    public  Zoo(List<Animal> animals){
+        this.animals = animals;
+
+    }
+
+    public void addPet(Animal addAnimal) {
+        animals.add(addAnimal);
+    }
+
+    public List<Animal> sortBySpecies(List<Animal> animalsToSort) {
+        animalsToSort.sort(Comparator.comparing(Animal :: getSpecies));
+        return animalsToSort;
+    }
+
+    public  List<Animal> searchAnimalsLongLivers(int years) {
+        List<Animal> result = new LinkedList<>();
+        for (Animal animal : animals ) {
+            if (animal.getYearsOfLife() > years) {
+                result.add(animal);
+            }
+        }
+        return sortBySpecies(result);
+    }
+
+}
