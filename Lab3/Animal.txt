@@ -1,33 +1,35 @@
 
+package ua.iot.io;
+
 public class Animal {
-	    private String species;
-	    int yearsOfLife;
+    private  String species;
+    private  int yearsOfLife;
 
 
-	    public Animal (String species, int yearsOfLife) {
-	        setSpecies(species);
-	        setYearsOfLife(yearsOfLife);
-	    }
+    public  Animal(final String species, final int yearsOfLife) {
+        setSpecies(species);
+        setYearsOfLife(yearsOfLife);
+    }
 
-	    @Override
-	    public String toString() {
-	        return " Animal called " + species  + " live for " + this.yearsOfLife + "\n";
+    public final String toString() {
+        return " Animal called " + species
+               +  " live for " + this.yearsOfLife + "\n";
 
-	    }    
+    }
 
-	    public int getYearsOfLife() {
-			return yearsOfLife;
-		}
+    public final int getYearsOfLife() {
+        return yearsOfLife;
+    }
 
-		public void setYearsOfLife(int yearsOfLife) {
-			this.yearsOfLife = yearsOfLife;
-		}
+    public final void setYearsOfLife(final int yearsOfLife) {
+        this.yearsOfLife = yearsOfLife;
+    }
 
-		public String getSpecies() {
-	        return species;
-	    }
+    public final String getSpecies() {
+        return species;
+    }
 
-	    public void setSpecies(String species) {
-	        this.species = species;
-	    }
+    public final void setSpecies(final String species) {
+        this.species = species;
+    }
 }

@@ -1,3 +1,8 @@
+package ua.iot.io;
+
+
+import ua.iot.io.Animal;
+
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
@@ -14,6 +19,10 @@ public class Zoo {
         return this.animals;
     }
 
+    public Zoo(){
+
+    }
+
     public  Zoo(List<Animal> animals){
         this.animals = animals;
 
@@ -27,6 +36,7 @@ public class Zoo {
         animalsToSort.sort(Comparator.comparing(Animal :: getSpecies));
         return animalsToSort;
     }
+
 
     public  List<Animal> searchAnimalsLongLivers(int years) {
         List<Animal> result = new LinkedList<>();
