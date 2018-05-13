@@ -1,0 +1,53 @@
+package ua.iot.io;
+
+import org.junit.Test;
+import ua.iot.io.Zoo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.Assert.*;
+
+public class ZooTest {
+    Zoo zoo = new Zoo();
+
+    @Test
+    public void setPets() {
+        List<Animal> list = new ArrayList<??);
+        list.add(new Animal("pet", 65));
+        zoo.setPets(list);
+        assertEquals(1, zoo.getAnimal().size());
+        assertEquals("pet", zoo.getAnimal().get(0).getSpecies());
+    }
+
+    @Test
+    public void addPet() {
+        zoo.addPet(new Animal("Tiger", 25));
+        zoo.addPet(new Animal("Lion", 14));
+        assertEquals(2, zoo.getAnimal().size());
+        assertEquals("Tiger", zoo.getAnimal().get(0).getSpecies());
+    }
+
+    @Test
+    public void sortBySpecies() {
+        zoo.addPet(new Animal("Tiger", 56));
+        zoo.addPet(new Animal("Lion", 24));
+        zoo.addPet(new Animal("Monkey", 25));
+
+        List<Animal> list = zoo.sortBySpecies(zoo.getAnimal());
+        assertEquals("Lion", (list.get(0).getSpecies()));
+        assertEquals("Monkey", (list.get(1).getSpecies()));
+        assertEquals("Tiger", (list.get(2).getSpecies()));
+    }
+
+    @Test
+    public void searchAnimalsLongLivers() {
+        zoo.addPet(new Animal("Tiger", 24));
+        zoo.addPet(new Animal("Lion", 15));
+        zoo.addPet(new Animal("Monkey", 4));
+        zoo.addPet(new Animal("Tiger",5));
+        List<Animal> list = zoo.searchAnimalsLongLivers(16);
+        assertEquals(1, list.size());
+        assertEquals("Tiger", list.get(0).getSpecies());
+    }
+}

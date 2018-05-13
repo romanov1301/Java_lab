@@ -1,0 +1,33 @@
+package ua.iot.io;
+
+
+import org.junit.Before;
+import org.junit.Test;
+
+import static junit.framework.TestCase.assertNotNull;
+import static org.junit.Assert.assertEquals;
+
+class AnimalTest {
+        Animal animal =null;
+        @Before
+                public void setUp(){animal=new Animal("Lion",45);}
+
+
+        @Test
+        public void toStringTest(){
+            assertNotNull(animal.getSpecies());
+            assertNotNull(animal.getYearsOfLife());
+        }
+
+        @Test
+         public void getYearsOfLife() {
+            animal.setYearsOfLife(25);
+            assertEquals(25,animal.getYearsOfLife());
+        }
+
+        @Test
+        public void getSpecies() {
+            animal.setSpecies("Lion");
+            assertEquals("Tiger",animal.getSpecies());
+        }
+    }
