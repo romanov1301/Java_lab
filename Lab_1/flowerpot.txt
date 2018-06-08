@@ -33,7 +33,7 @@ public class flowerpot {
 	}
 
 	public String toString() {
-		return "Опис вазона:" + "\ncolor-" + color + ".\npot-" + pot + ".\nground-" + ground + "\nheightplant-"
+		return "descriptionOfThe vase:" + "\ncolor-" + color + ".\npot-" + pot + ".\nground-" + ground + "\nheightplant-"
 				+ heightplant + ".\nfruity -" + fruity + ".\nvolumes-" + volumes;
 	}
 
