@@ -45,7 +45,7 @@ public class flowerpot {
 		System.out.println("Number of fertilizers on" + getamountofwater() + "water" + (getamountofwater() / 4));
 	}
 
-	public void GoTO(String color, String pot, String ground, int heightplant, boolean fruity, int volumes) {
+	public void goto(String color, String pot, String ground, int heightplant, boolean fruity, int volumes) {
 		this.color = color;
 		this.pot = pot;
 		this.ground = ground;
