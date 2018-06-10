@@ -1,5 +1,5 @@
 
-public class flowerpot {
+public class Flowerpot {
 	public String color;
 	public String pot;
 	public String ground;
@@ -54,7 +54,7 @@ public class flowerpot {
 		this.volumes = volumes;
 	}
 
-	public void setpot(String pot) {
+	public void setPot(String pot) {
 		this.pot = pot;
 	}
 
