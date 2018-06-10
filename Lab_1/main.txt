@@ -1,8 +1,8 @@
 public class launching {
 	public static void main(String[] args) {
-		flowerpot Ficus = new flowerpot();
-		flowerpot Lemon = new flowerpot("grean", "round", true, 20, 45);
-		flowerpot Cactus = new flowerpot("yelov", "square", "broun", false, 10, 5);
+		flowerpot ficus = new flowerpot();
+		flowerpot lemon = new flowerpot("grean", "round", true, 20, 45);
+		flowerpot cactus = new flowerpot("yelov", "square", "broun", false, 10, 5);
 		System.out.println(Ficus.toString());
 		System.out.println(Lemon.toString());
 		System.out.println(Cactus.toString());
